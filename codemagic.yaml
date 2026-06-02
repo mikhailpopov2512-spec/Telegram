@@ -7,8 +7,6 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "org.telegram.messenger"
-      android_signing:
-        - keystore_reference
     
     scripts:
       - name: Установка Java
@@ -29,7 +27,6 @@ workflows:
         
     artifacts:
       - TMessagesProj/build/outputs/apk/**/*.apk
-      - TMessagesProj/build/outputs/bundle/**/*.aab
     
     publishing:
       email:
